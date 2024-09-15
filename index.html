@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple React Page</title>
+    <!-- Include React and ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    
+
+    <!-- The root element where React will render our component -->
+    <div id="root"></div>
+
+    <script>
+        // Define a simple React component that renders multiple divs
+        const App = () => {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement('h1', null, 'Learn Web Development.'),
+                React.createElement('div', null, React.createElement('p', null, 'Welcome to MDN learning area.This sets of article aims to guide complete begineer to web development with all they need to just start coding')),
+                React.createElement('div', null, " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolores quo minus labore veritatis vel, id rerum, iure quas iste earum nostrum aliquam dolor vero dicta alias obcaecati. Voluptatum et, expedita inventore repellendus minus, veritatis unde in quod voluptatibus delectus ", React.createElement('a', { href: 'https://www.example.com', target: '_blank' }, 'Welcome to MDN learning area.This sets of article aims to guide complete begineer to web development with all they need to just start coding  '), "suscipit! Ab, quam repudiandae optio obcaecati possimus velit cupiditate ipsum?"),
+                React.createElement('div', null, React.createElement('p', null, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae facilis soluta impedit aperiam vel illo dolorem in sint perspiciatis!')),
+
+            );
+        };
+
+        // Render the component into the root element
+        ReactDOM.render(
+            React.createElement(App, null),
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
